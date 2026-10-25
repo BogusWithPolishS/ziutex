@@ -83,5 +83,5 @@ position = Vector2(-149, 157)
 position = Vector2(196, 128)
 
 [node name="Door" parent="." unique_id=1626276797 instance=ExtResource("4_uxrcv")]
-position = Vector2(-500, 400)
+position = Vector2(1451, 7)
 script = ExtResource("5_rf2cd")

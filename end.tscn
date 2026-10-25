@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnvv3d6idrhf5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 20
+
+[node name="Node2D" type="Node2D" unique_id=1931398993]
+
+[node name="Label" type="Label" parent="." unique_id=961378779]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Congrats!! Press alt + f4 for super secret bonus level!!!!!!!"
+label_settings = SubResource("LabelSettings_g4v7s")

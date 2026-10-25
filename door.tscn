@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfgkgscdiuh7i"]
 
-[ext_resource type="Texture2D" uid="uid://bi6o8knsrrps0" path="res://icon.svg" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://wpa3gye3nqaw" path="res://endd.png" id="1_ba8gm"]
 
 [sub_resource type="GDScript" id="GDScript_ba8gm"]
 script/source = "extends StaticBody2D
@@ -9,9 +9,10 @@ script/source = "extends StaticBody2D
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(128, 128)
+size = Vector2(33.166668, 33.333336)
 
 [node name="Door" type="StaticBody2D" unique_id=1626276797]
+scale = Vector2(6, 6)
 script = SubResource("GDScript_ba8gm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=712140972]
@@ -20,4 +21,5 @@ texture = ExtResource("1_ba8gm")
 [node name="Area2D" type="Area2D" parent="." unique_id=1908215738]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=565440261]
+position = Vector2(-0.91666573, -1)
 shape = SubResource("RectangleShape2D_g4v7s")
