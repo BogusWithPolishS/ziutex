@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://x5hongrrhfe7"]
+
+[ext_resource type="Script" uid="uid://d22sj64iokxmm" path="res://button.gd" id="1_s2ta7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 20
+
+[node name="Node2D" type="Node2D" unique_id=1931398993]
+
+[node name="Label" type="Label" parent="." unique_id=961378779]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hi!! Thanks for playing my game and sorry for such a long wall of text :(
+
+The little flying star guys are the Ziooteks. They are helping you get through the levels!
+
+If you're on the ground and move, the Ziooteks will move with you, but if you're in the air, they won't move horizontally,
+instead, they will move vertically when you press up/down.
+
+If you're directly above or below a Ziootek, it will move slower.
+
+The animations aren't very polished because I didn't have enough time, sorry ):"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="Button" type="Button" parent="." unique_id=2071572736]
+offset_left = 370.0
+offset_top = 448.0
+offset_right = 683.0
+offset_bottom = 552.0
+text = "Play"
+script = ExtResource("1_s2ta7")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

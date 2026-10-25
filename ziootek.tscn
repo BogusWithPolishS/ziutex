@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://chp8i0o2r2ach"]
+
+[ext_resource type="Script" uid="uid://bhm1at6cr4f4y" path="res://ziootek.gd" id="1_8cob2"]
+[ext_resource type="Texture2D" uid="uid://d1yh1wviaa6ro" path="res://ziootek/ziootek1.png" id="2_ct8qt"]
+[ext_resource type="Texture2D" uid="uid://dhfcynd136tdo" path="res://ziootek/ziootek2.png" id="3_guydc"]
+[ext_resource type="Texture2D" uid="uid://qvmdg3amjm1l" path="res://ziootek/ziootek3.png" id="4_45ief"]
+[ext_resource type="Texture2D" uid="uid://bhyh1ro81ot1q" path="res://ziootek/ziootek4.png" id="5_n1w6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(34.66667, 9.666668)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ct8qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_guydc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_45ief")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n1w6c")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Ziootek" type="CharacterBody2D" unique_id=1506905657]
+scale = Vector2(6, 6)
+platform_on_leave = 2
+platform_floor_layers = 4294967040
+script = ExtResource("1_8cob2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1500154492]
+position = Vector2(-4.7683716e-07, -0.666667)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=428475293]
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+animation = &"idle"

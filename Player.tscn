@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d1epugguscu6n"]
+
+[ext_resource type="Script" uid="uid://btp77lmx4km2r" path="res://Plr.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://ciskehqjmiyi6" path="res://guy/guy_walk1.png" id="2_kne1u"]
+[ext_resource type="Texture2D" uid="uid://v1appnp87jcm" path="res://guy/guy_stand.png" id="2_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://ignnqvcsk4mr" path="res://guy/guy_fall1.png" id="2_tdg3f"]
+[ext_resource type="Texture2D" uid="uid://cf18d84hf08mx" path="res://guy/guy_fall2.png" id="3_dtqjt"]
+[ext_resource type="Texture2D" uid="uid://cfmof32nmxhsu" path="res://guy/guy_walk2.png" id="3_e80uo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(7.166667, 23.833334)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tdg3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dtqjt")
+}],
+"loop": 1,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kpjcp")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kne1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e80uo")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1828859582]
+scale = Vector2(6, 6)
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524600196]
+position = Vector2(-0.4166665, 2.583333)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1417723468]
+position = Vector2(2.30968e-07, -1.2665987e-07)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+animation = &"idle"
